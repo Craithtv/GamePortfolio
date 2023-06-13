@@ -1,14 +1,40 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2299.6">
-  <style type="text/css">
-  </style>
-</head>
-<body>
-</body>
-</html>
+#game{
+  width: 500px;
+  Height: 200px;
+  Border: 1px solid black;
+  Margin: auto;
+}
+
+#character{
+  Width: 20px;
+  Height: 50px;
+  Background-color: red;
+  Position: relative;
+  Top: 150px; /*Game height - character height (200-50)*/
+}
+
+@keyframes jump{
+  0%{top: 150px;}
+  30%{top: 150px;}
+  70%{top: 100px;}
+  100%{top: 150px;}
+}
+
+.animate{
+  Animation: jump 300ms linear;
+}
+
+#block{
+  Width: 20px;
+  Height: 20px;
+  background-color: blue;
+  Position: relative;
+  Top: 130px;
+  Left: 480px;
+  Animation: block 1s infinite linear;
+}
+
+@keyframes block{
+  0%{left: 500px;}
+  30%{left: -20px;}
+}
